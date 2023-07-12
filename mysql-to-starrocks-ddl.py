@@ -14,7 +14,7 @@ table_list = ["xxxx","xxxx"]
 created_time_field = ["created_time","created_at","create_time","create_at"]
 dynamic_partition_or_not = "Yes"
 partition_row = 1000000
-index_cardinality = 400
+index_cardinality = 10000
 
 # MySQL的数据类型到Starrocks的数据类型映射关系
 def map_data_type(data_type):
