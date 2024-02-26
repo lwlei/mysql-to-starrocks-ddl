@@ -235,7 +235,7 @@ def get_bucket_count(table_size,dynamic_partition,start,end):
     if not dynamic_partition:
         return min(16, max(4, math.ceil(table_size/3/1024/1024/1024)))
     else:
-        time_diff = relativedelta(start, end)
+        time_diff = relativedelta(end, start)
         months_diff = time_diff.months + time_diff.years * 12 + 1
         estimated_size_per_month = table_size / months_diff
         return min(16, max(2, math.ceil(estimated_size_per_month/3/1024/1024/1024)))
